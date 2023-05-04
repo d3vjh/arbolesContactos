@@ -6,13 +6,11 @@ public class NodeBTree {
 	Data key[];
 	NodeBTree child[];
 	
-	
-	public NodeBTree(int t) {
-		// TODO Auto-generated constructor stub
+	public NodeBTree(int g) {
 		nKeys = 0;
 		leaf = true;
-		key = new Data[((2 * t) - 1)];
-		child = new NodeBTree[(2 * t)];
+		key = new Data[((2 * g) - 1)];
+		child = new NodeBTree[(2 * g)];
 	}
 }
 
