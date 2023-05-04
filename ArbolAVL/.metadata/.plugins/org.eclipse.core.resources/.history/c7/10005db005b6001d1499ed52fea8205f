@@ -1,0 +1,17 @@
+package lógica;
+
+
+public class Main {
+	public static void main(String[] args) {
+
+	
+		if(1<5)
+			if(1<4)
+				System.out.println("Entro al primero");
+			else
+				System.out.println("Entro al segundo");
+		
+		
+		
+	}
+}

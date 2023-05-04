@@ -1,0 +1,62 @@
+package lógica;
+
+public class AVL {
+	
+	private AVLNode root;
+	
+	public AVLNode search(int d, AVLNode r) {
+		if(root==null)
+			return null;
+		else if(r.key.number==d)
+			return r;
+		else if(r.key.number > d)
+			return search(d, r.right);
+		else
+			return search(d, r.left);
+	}	
+	
+	public int getCount(AVLNode x) {
+		if(x==null)
+			return -1;
+		else
+			return x.count;
+	}
+	
+	public AVLNode leftRotation(AVLNode c) {
+		AVLNode aux=c.left;
+		c.left = aux.right;
+		aux.right=c;
+		c.count=Math.max(c.left.count, c.right.count+1);
+		aux.count=Math.max(aux.left.count, aux.right.count+1);
+		return aux; 
+	}
+	
+	public AVLNode rightRotation(AVLNode c) {
+		AVLNode aux = c.right;
+		c.right=aux.left;
+		aux.left=c;
+		c.count=Math.max(c.left.count, c.right.count+1);
+		aux.count=Math.max(aux.left.count, aux.right.count+1);
+		return aux;
+	
+	}
+	
+	public AVLNode doubleRotationLeft(AVLNode c) {
+		AVLNode temp;
+		c.left=leftRotation(c.left);
+		temp=leftRotation(c);
+		return temp;
+	}
+	
+	public AVLNode doubleRotatioRight(AVLNode c) {
+		AVLNode temp;
+		c.right=leftRotation(c.right);
+		temp=rightRotation(c);
+		return temp;
+		
+	}
+	
+	public AVLNode insert(AVLNode key, )
+	
+}
+    

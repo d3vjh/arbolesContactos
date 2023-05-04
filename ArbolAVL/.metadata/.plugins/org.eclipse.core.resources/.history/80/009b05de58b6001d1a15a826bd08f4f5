@@ -1,0 +1,54 @@
+package lógica;
+
+
+public class Main {
+	public static void main(String[] args) {
+		
+		
+
+		
+		AVL a = new AVL();
+		
+		Data c = new Data(7, null, null, null);
+		Data d = new Data(5, null, null, null);
+		Data e = new Data(4, null, null, null);
+		Data f = new Data(2, null, null, null);
+		Data g = new Data(15, null, null, null);
+		Data h = new Data(14, null, null, null);
+		Data j = new Data(25, null, null, null);
+		Data k = new Data(21, null, null, null);
+		Data l = new Data(16, null, null, null);
+		Data m = new Data(0, null, null, null);
+		Data n = new Data(1, null, null, null);
+		Data p = new Data(3, null, null, null);
+		
+		
+		a.insert(c);
+		a.insert(d);
+		a.insert(e);
+		a.insert(f);
+		a.insert(g);
+		a.insert(h);
+		a.insert(j);
+		a.insert(k);
+		a.insert(l);
+		a.insert(m);
+		a.insert(n);
+		a.insert(p);
+		
+		System.out.println(a.search(3, a.root).key.name);
+		
+		System.out.println("-----PreOrder");
+		a.preOrder();
+		System.out.println("-----In Order");
+		a.inOrder();
+		System.out.println("PostOrder");
+		a.postOrder();
+		
+		
+		
+		
+		
+		
+	}
+}

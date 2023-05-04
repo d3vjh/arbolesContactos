@@ -1,0 +1,36 @@
+package lógica;
+
+import java.util.Random;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Random random = new Random();
+		AVL arbolito = new AVL();
+		
+		long time_i = System.nanoTime(); //tiempo inicial
+        for (int i = 0; i < 800000; i++) {
+          String nombre = (char) (random.nextInt(26) + 'a')+""+(char) (random.nextInt(26) + 'a')+(char) (random.nextInt(26) + 'a');
+          String apellido = (char) (random.nextInt(26) + 'a')+""+(char) (random.nextInt(26) + 'a')+(char) (random.nextInt(26) + 'a');
+          String ciudad = (char) (random.nextInt(26) + 'a')+""+(char) (random.nextInt(26) + 'a')+(char) (random.nextInt(26) + 'a');
+          
+          Data contacto = new Data(i, nombre, apellido, ciudad);
+          arbolito.insert(contacto);
+        }
+		
+		
+		
+		//System.out.println(a.search(3, a.root).key.name);
+	
+		System.out.println("PostOrder");
+		arbolito.postOrder();
+		//long double_f = (System.nanoTime() - time_i)/1000000;
+        System.out.println("tiempo de ejecucion: " + double_f+" mili segundos");
+		
+		
+		
+		
+		
+		
+	}
+}

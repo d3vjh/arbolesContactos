@@ -1,0 +1,12 @@
+package lógica;
+
+
+public class Main {
+	public static void main(String[] args) {
+		AVL a = new AVL();
+		
+		
+	
+
+	}
+}

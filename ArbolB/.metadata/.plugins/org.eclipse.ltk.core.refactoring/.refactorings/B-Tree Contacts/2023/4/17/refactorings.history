@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;btree&apos; to &apos;logic&apos;&#x0D;&#x0A;- Original project: &apos;B-Tree Contacts&apos;&#x0D;&#x0A;- Original element: &apos;B-Tree Contacts/src/btree&apos;&#x0D;&#x0A;- Renamed element: &apos;B-Tree Contacts/src/logic&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;btree&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;btree" name="logic" qualified="false" references="true" stamp="1682571086338" textual="false" version="1.0"/>
+</session>

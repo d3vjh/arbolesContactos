@@ -1,0 +1,56 @@
+package lógica;
+
+/******************************************************
+ * AVL Node
+ ******************************************************/
+public class AVLNode {
+    public Data key;           /* Key */
+    public int count;         /* Equilibrate Factor */
+    public AVLNode left;      /* Pointer to the left child */
+    public AVLNode right;     /* Pointer to the right child */
+
+    
+    
+    // Constructor
+    public AVLNode(Data key, int count) {
+        this.key = key;
+        this.count = count; // if node is already in present setting its count on creation is more easier than increasing it later
+        left = right = null;
+    }
+    
+    
+    public void inOrder() {
+    	if(left!=null)
+    		left.inOrder();
+    	System.out.println("[+] " +key.number + " " + key.name + " " + key.lastName + " " + key.city );
+    	if(right!=null)
+    		right.inOrder();
+	}
+    
+    
+    public void preOrder() {
+    	System.out.println("[+] " +key.number + " " + key.name + " " + key.lastName + " " + key.city );
+    	if(left!=null)
+    		left.preOrder();
+    	if(right!=null)
+    		right.preOrder();
+	}
+    
+    
+    public void postOrder() {
+    	if(left!=null)
+    		left.postOrder();
+    	if(right!=null)
+    		right.postOrder();
+    	System.out.println("[+] " +key.number + " " + key.name + " " + key.lastName + " " + key.city );
+    }
+    
+    
+    
+    
+    
+};
+
+	
+
+	

@@ -1,0 +1,11 @@
+package lógica;
+
+public class Main {
+	   public static void main(String []args){ 
+	        ArbolAVL árbol = new ArbolAVL (); 
+	        árbol.insertar(6); 
+	        árbol.insertar(3); 
+	        árbol.insertar(7); 
+	        árbol.visualizar(); 
+	    } 
+}

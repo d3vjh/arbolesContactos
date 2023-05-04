@@ -1,0 +1,93 @@
+package lógica;
+
+public class AVL {
+	
+	private AVLNode root;
+	
+	public AVLNode search(int d, AVLNode r) {
+		if(root==null)
+			return null;
+		else if(r.key.number==d)
+			return r;
+		else if(r.key.number > d)
+			return search(d, r.right);
+		else
+			return search(d, r.left);
+	}	
+	
+	public int getCount(AVLNode x) {
+		if(x==null)
+			return -1;
+		else
+			return x.count;
+	}
+	
+	public AVLNode leftRotation(AVLNode c) {
+		AVLNode aux=c.left;
+		c.left = aux.right;
+		aux.right=c;
+		c.count=Math.max(c.left.count, c.right.count+1);
+		aux.count=Math.max(aux.left.count, aux.right.count+1);
+		return aux; 
+	}
+	
+	public AVLNode rightRotation(AVLNode c) {
+		AVLNode aux = c.right;
+		c.right=aux.left;
+		aux.left=c;
+		c.count=Math.max(c.left.count, c.right.count+1);
+		aux.count=Math.max(aux.left.count, aux.right.count+1);
+		return aux;
+	
+	}
+	
+	public AVLNode doubleLeftRotation(AVLNode c) {
+		AVLNode temp;
+		c.left=rightRotation(c.left);
+		temp=leftRotation(c);
+		return temp;
+	}
+	
+	public AVLNode doubleRightRotation(AVLNode c) {
+		AVLNode temp;
+		c.right=leftRotation(c.right);
+		temp=rightRotation(c);
+		return temp;
+		
+	}
+	
+	public AVLNode insert(AVLNode nNode, AVLNode upper ) {
+		
+		AVLNode nFather = upper;
+		if(nNode.key.number < upper.key.number) 
+			if(upper.left==null)
+				upper.left=nNode;
+			else {
+				upper.left=insert(nNode, upper.left);
+				if(upper.left.count - upper.right.count == 2)
+					if(nNode.key.number<upper.left.key.number)
+						nNode=leftRotation(upper);
+					else
+						nFather=leftRotation(upper);
+			}
+		else if(nNode.key.number>upper.key.number)
+			if(upper.right==null)
+				upper.right=nNode;
+			else
+				upper.right=insert(nNode, upper.right);
+				if(upper.right.count - upper.left.count == 2)
+					if(nNode.key.number>upper.right.key.number)
+						nFather=rightRotation(upper);
+					else
+						nFather=rightRotation(upper);
+		else
+			
+					
+			
+			
+		
+		return nFather;
+	}
+	
+}
+    

@@ -1,0 +1,9 @@
+package logic;
+
+public class NodeBTree {
+	int nKeys; //Numero de claves almacenadas en el nodo
+	boolean leaf; //If the node is a leaf
+	Data key[];
+	NodeBTree child[];
+}
+

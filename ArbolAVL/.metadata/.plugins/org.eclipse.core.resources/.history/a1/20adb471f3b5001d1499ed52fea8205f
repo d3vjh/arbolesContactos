@@ -1,0 +1,19 @@
+package lógica;
+
+public class Datos {
+	public int order;
+	public String name;
+	public String lastName;
+	public String city;
+
+
+
+	public Datos(int order, String name, String lastName, String city) {
+		this.order=order;
+		this.name=name;
+		this.lastName=lastName;
+		this.city=city;
+	
+	}
+
+}

@@ -1,0 +1,21 @@
+package lógica;
+
+
+public class Main {
+	public static void main(String[] args) {
+
+	
+		if(1<5)
+			if(6<4)
+				System.out.println("Entro al primero");
+			else if(5<4)
+				System.out.println("Entro al segundo");
+			else
+				System.out.println("Holaaaa");
+		else
+			System.out.println("Continuamos");
+		
+		
+		
+	}
+}

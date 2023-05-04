@@ -1,0 +1,16 @@
+package logic;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Grado mínimo del Arbol B es t=3
+		// Cada Nodo soporta 2t hijos y 2t-1 claves
+		
+		int t = 3;
+		
+		//BTree btree = new BTree();//
+
+	}
+
+}
